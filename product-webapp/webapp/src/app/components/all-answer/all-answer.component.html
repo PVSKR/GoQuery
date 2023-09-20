@@ -1,0 +1,50 @@
+<mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4" class="toolbar" >
+
+
+  <div class="example-button-row">
+    <a class="navbar-brand mb-0 h1" [routerLink]="['/dashboard']">
+      <img src="https://media.istockphoto.com/vectors/letter-logo-custom-serif-style-lettering-with-hand-drawn-brush-stroke-vector-id1208204438?k=20&m=1208204438&s=612x612&w=0&h=JpIbhnCjVSE_26a_dJFtPpKwWJMOqk2PWiqIswpWe5Q=" width="30" height="30"
+          class="d-inline-block align-top" alt="">
+      GoQuery
+  </a>
+  </div>
+
+  <div class="spacer"></div>
+  
+  <a [routerLink]="['/questionlanding']" class="answer-button" style="margin-right: 16px">+Answer</a>
+  <a class="question-button" style="margin-right: 16px" [routerLink]="['/addquestion']">+Question</a>
+  <a class="profile-button" style="margin-right: 16px" [routerLink]="['/questioner']">Profile</a>
+  <a [routerLink]="['/login']" (click) = "logOut()" class="logout-button" style="margin-right: 16px">LogOut</a>
+  
+</mat-toolbar>
+
+
+<mat-card class="all-answer-card">
+  <br>
+  <div class="per-question" [innerHtml]="question.strQuestionTitle">
+  </div>
+  <!-- <mat-card-title style="color: white;">{{question?.strQuestionTitle}}</mat-card-title> -->
+
+
+
+<div *ngFor="let ans of answers" class="answer-card">
+  <div id="answer-style">
+    <br>
+    <div class="per-answer"  [innerHtml]= "ans?.strAnswerStatement"></div>
+    <br>
+    
+      <button mat-button (click)="upVote(ans)" (click)="refreshAnswer(ans)" class="vote" style="background-color:cadetblue;margin-right: 0.5%;">UPVOTE</button> 
+      <b class="vote" [innerHtml]= "ans?.intAnswerUpvote"></b>&nbsp;
+      <button mat-button (click)="downVote(ans)" (click)="refreshAnswer(ans)" class="vote" style="background-color: firebrick;margin-right: 0.5%;">DOWNVOTE</button>
+      <b class="vote" [innerHtml]="ans?.intAnswerDownvote"></b>
+      <div *ngFor="let comment of ans?.comments">
+        <p>{{comment.strComment}} &nbsp; - &nbsp; Commented by {{comment.strCommentedBy}}</p>
+      </div>
+      <form [formGroup]="commentForm" (ngSubmit)="comment(ans)">
+        <textarea matInput formControlName="comment" class="form-Control"></textarea>
+      <button mat-button type="submit" class="cmts-btn" (click)= "refreshAnswer(ans)">comment</button>
+    </form>
+    <button mat-button (click)="acceptAnswer(ans)" [disabled]="compare(ans)" class="vote" style="background-color: rgb(135, 135, 170);">Accept Answer</button>
+  </div>
+  </div>
+</mat-card>

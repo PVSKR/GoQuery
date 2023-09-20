@@ -1,0 +1,59 @@
+<div class="home">
+<mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4" class="toolbar" >
+
+
+  <div class="example-button-row">
+    <button mat-raised-button class="button-color" [routerLink]="['/dashboard']">GoQuery</button>
+  </div>
+
+  <div class="spacer"></div>
+  <button mat-raised-button [routerLink]="['/login']" (click) = "logOut()" class="button-color" style="margin-right: 16px">LogOut</button>
+  <button mat-raised-button [routerLink]="['/questionlanding']" class="button-color" style="margin-right: 16px">Answer a
+    Question</button>
+  <button mat-raised-button class="button-color" style="margin-right: 16px" [routerLink]="['/addquestion']">Add a Question</button>
+
+
+</mat-toolbar>
+
+<div class="question-search">
+  <input type="text" id ="search-box" [(ngModel)]="searchQuery" placeholder="Search for questions">
+</div>
+<div class="example-button-row">
+  <button mat-raised-button type = "submit" (click)= "search()"class="button-color" >Search</button>
+</div>
+
+<div *ngFor="let question of questions">
+  <mat-card class="example-card" (click)="getAllAnswers(question?.uuidQuestionId)">
+    <!-- <mat-card-title class="question-title-dashboard" (click)="getAllAnswers(question?.uuidQuestionId)"
+      title="Show all answers"><span class="hoverable">{{question.strQuestionTitle}}</span></mat-card-title> -->
+      <div [innerHtml]="question.strQuestionTitle"></div>
+    <mat-card-content *ngFor="let tag of question.arrQuestionTags">
+      <b>{{tag}}&nbsp;&nbsp; </b>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button (click)="upVote(question)" class="vote">UPVOTE</button> {{question.intQuestionUpvote}}
+      <button mat-button (click)="downVote(question)" class="vote">DOWNVOTE</button> {{question.intQuestionDownvote}}
+
+    </mat-card-actions>
+    <!-- <p>This is some regular text, but if you <span class="hoverable">hover over this bit</span> it will get a yellow background.</p> -->
+  </mat-card>
+
+</div>
+
+</div>
+
+<!-- <mat-card class="example-card" >
+  <div *ngFor="let question of Questions">
+    <mat-card-title><a [routerLink]="['/answer']">{{question.strQuestionTitle}}</a></mat-card-title>
+    <mat-card-content *ngFor= "let tag of question.arrQuestionTags">
+      <b>{{tag}}&nbsp;&nbsp; </b>
+    </mat-card-content>
+   
+    <mat-card-actions>
+      <button mat-button (click) = "upVote(question)" class="vote">UPVOTE</button> {{question.intQuestionUpvote}}
+      <button mat-button (click) = "downVote(question)"class="vote">DOWNVOTE</button> {{question.intQuestionDownvote}}
+      
+    </mat-card-actions>
+  </div>
+  </mat-card> -->

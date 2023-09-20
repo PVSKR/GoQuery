@@ -1,0 +1,54 @@
+
+
+.landingpage .nav-item
+{
+    float: right;
+}
+#toolbar-color{
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+  
+}
+
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    
+    background-size: cover;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+
+  .example-card {
+   
+    background-color: #00fff5;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+  }
+  .new{
+    color: wheat;
+  }
+  .container-fluid{
+    background-color: grey;
+  }
+  .logo{
+    border-radius: 40%;
+    align-items: center;
+  }
+  

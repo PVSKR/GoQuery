@@ -1,0 +1,40 @@
+
+.navbar {
+  justify-content: space-between;
+}
+#toolbar-color{
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+.button-color{
+  background-color: #f7b8d7;
+  color: #f0f8fffa (248, 255, 0.945);
+}
+.button-color:hover {
+  background-color: rgb(252, 82, 195);
+}
+span{
+  padding-right: 1rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+  .example-card {
+    max-width: 400px;
+  }
+  mat-card-title{
+    color: #368fb9;
+    cursor: pointer;
+  }
+  
+  .example-card {
+    margin-left: 3rem;
+    margin-top: 3rem;
+    width: 100%;
+    display:inline-block;
+    align-items: center;
+  }
+  .vote{
+    background-color: rgb(155, 103, 192);
+  }

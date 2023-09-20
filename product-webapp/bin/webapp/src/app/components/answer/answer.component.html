@@ -1,0 +1,95 @@
+<mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4">
+    <div class="example-button-row">
+        <button mat-raised-button class="button-color" [routerLink]="['/dashboard']">GoQuery</button>
+    </div>
+
+    <div class="spacer"></div>
+    <button mat-raised-button class="button-color" style="margin-right: 16px" [routerLink]="['/addquestion']">Add a
+        Question</button>
+</mat-toolbar>
+
+<!-- <div id="card">
+    <div class="answerCard">
+        <h2 [innerHtml]="question?.strQuestionTitle"></h2>
+
+        <form [formGroup]="answerForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance = "fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput formControlName="answer" class="form-Control" placeholder="Type Here!" (keyup)="updateOutput($event.target.value)"></textarea>
+            </mat-form-field>      
+        
+            <app-markdown [compiled]="compiledMarkdown" [placeHolder]="startingValue"
+                (valueChanged)="onValueChanged($event)">
+            </app-markdown>
+
+
+            <br>
+            <p>Output</p>
+            <p [innerHtml]="convertedText"></p>
+            <br>
+            <div>
+                <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+            </div> 
+
+        </form>
+
+
+    </div>
+</div> -->
+            <!-- <textarea matInput formControlName="answer" class="form-Control"  (keyup)="updateOutput($event.target.value)"></textarea> -->
+            <app-markdown [compiled]="compiledMarkdown" [placeHolder]="startingValue"
+                        (valueChanged)="onValueChanged($event)">
+                    </app-markdown>
+        
+    <br>  <p>Output</p>
+    <p [innerHtml]="convertedText"></p>
+<br>
+       <div>
+        <button type="button" (click) = "onSubmit()"class="btn btn-primary">Submit</button>
+       </div>
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row"> -->
+<!-- <div class="col-md-6">
+            <h5>Markdown</h5>
+            <textarea name="markdown" id="markdown-area" rows="30" placeholder="Enter your markdown here..." (keyup)="updateOutput($event.target.value)"></textarea>
+        </div> -->
+<!-- <div class="col-md-6">
+            <h5>Output</h5>
+            Converted markdown will display here
+            <div [innerHtml]="convertedText"></div>
+        </div> -->
+<!-- </div>
+</div> -->
+<form [formGroup]="answerForm" (ngSubmit)="(onSubmit)">
+    <!-- <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Question Description</label>
+        <input id="questioninput" placeholder="Write question in detail"
+            formControlName="strQuestionTitle" type="text" class="form-control" (keyup)="updateOutput($event.target.value)"[innerHtml]="convertedText">
+            <p [innerHtml]="convertedText"></p>
+        <span class="text-danger"
+            *ngIf="addQuestionform.controls['strQuestionTitle'].dirty && addQuestionform.hasError('required','strQuestionTitle')">*Please
+            provide the question description</span>
+    </div> -->
+    <app-markdown [compiled]="compiledMarkdown" [placeHolder]="startingValue"
+        (valueChanged)="onValueChanged($event)">
+    </app-markdown>
+
+    <br>
+    <label for="multiselect" style="color: black">Question Topic Tags</label>
+    <!-- <div class="multi-select">
+        <ng-multiselect-dropdown formControlName="interests" [placeholder]="'Add question tags'"
+            [settings]="dropdownSettings" [data]="dropdownList">
+        </ng-multiselect-dropdown>
+    </div> -->
+    <br>
+    <div fxLayout="row" fxLayoutAlign="end end">
+        <button  mat-raised-button color="primary" [disabled]="" (click)="onSubmit()">Submit</button>
+    </div>
+</form>
+
+

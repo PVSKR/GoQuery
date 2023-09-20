@@ -1,0 +1,66 @@
+.navbar {
+    justify-content: space-between;
+  }
+  #toolbar-color{
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+  }
+
+  span{
+    padding-right: 1rem;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .all-answer-card{
+    background: linear-gradient(90deg, rgb(240, 243, 198) 0%, rgb(216, 221, 148) 100%);
+      width: 100%;
+  }
+
+.answer-card{
+  background-color:rgb(166, 182, 176);
+  background: linear-gradient(90deg, rgb(155, 177, 171) 0%, rgb(121, 189, 171) 100%);
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 85%;
+  border: none;
+}
+h1{
+  font-size: 35px;
+}
+#answer-style{
+  margin-left: 2%;
+}
+ .vote{
+  margin-bottom: 2%;
+} 
+.cmts-btn{
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  background-color: rgb(135, 135, 170);
+  border: none;
+}
+.form-Control{
+  width: 98%;
+}
+
+.per-answer{
+  font-size: 25px;
+}
+
+.per-question{
+  font-size: 40px;
+  margin-bottom: 2%;
+}
+a{
+  text-decoration: none;
+  color: wheat;
+}
+
+img
+{
+    border-radius: 40%;
+    align-items: center;
+}
