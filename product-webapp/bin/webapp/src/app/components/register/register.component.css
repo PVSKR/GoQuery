@@ -1,0 +1,41 @@
+
+.home
+{
+    background-image: url(https://images.pexels.com/photos/1101125/pexels-photo-1101125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.card{
+  border:none;
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+
+.card h1, h6{
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
+
+#emailHelp{
+  color: bisque;
+}
+
+.multi-select{
+  background-color: #fff;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}

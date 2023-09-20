@@ -1,0 +1,69 @@
+
+
+.navbar {
+  justify-content: space-between;
+}
+#toolbar-color{
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+  position: sticky;
+  z-index: 1000;
+  top: 0%;
+  position: fixed;
+}
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+span{
+  padding-right: 1rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.home
+{
+    background-image: url(https://cdn.wallpapersafari.com/24/58/WZgFbH.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    object-position: center;
+    object-fit: cover;
+}
+.card{
+    border:none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, #534176 100%);
+}
+
+.card h1, h6{
+    color: #fff;
+}
+
+label {
+    color: #fff;
+}
+#emailHelp{
+    color: bisque;
+}
+
+.register-btn{
+    text-decoration: none;
+    color: wheat;
+}
+
+img
+{
+    border-radius: 40%;
+    align-items: center;
+}
+

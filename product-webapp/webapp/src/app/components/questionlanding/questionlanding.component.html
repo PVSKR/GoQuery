@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4" class="toolbar" >
+
+
+  <div class="example-button-row">
+    <a class="navbar-brand mb-0 h1" [routerLink]="['/dashboard']">
+      <img src="https://media.istockphoto.com/vectors/letter-logo-custom-serif-style-lettering-with-hand-drawn-brush-stroke-vector-id1208204438?k=20&m=1208204438&s=612x612&w=0&h=JpIbhnCjVSE_26a_dJFtPpKwWJMOqk2PWiqIswpWe5Q=" width="30" height="30"
+          class="d-inline-block align-top" alt="">
+      GoQuery
+  </a>
+  </div>
+
+  <div class="spacer"></div>
+  
+ 
+  <a class="question-button" style="margin-right: 16px" [routerLink]="['/addquestion']">+Question</a>
+  <a class="profile-button" style="margin-right: 16px" [routerLink]="['/questioner']">Profile</a>
+  
+
+</mat-toolbar>
+
+<div *ngFor="let question of questions">
+  <div *ngIf="!question.acceptedAnswer">
+    <div class="example-card">
+      <h2 (click)="addAnswer(question?.uuidQuestionId)" [innerHtml]="question.strQuestionTitle"></h2>
+      <h4 *ngFor="let tag of question.arrQuestionTags">
+        <a>{{tag}}&nbsp;&nbsp; </a>
+      </h4>
+
+      
+    </div>
+  </div>
+</div>

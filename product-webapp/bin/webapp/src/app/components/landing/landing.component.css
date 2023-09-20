@@ -1,0 +1,46 @@
+.home
+{
+    background-image: url(https://cdn.wallpapersafari.com/24/58/WZgFbH.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.homecontent
+{
+        position:absolute;
+        top: 65%;
+        left: 30%;
+        transform: translate(20px,20px);
+}
+.homecontent h1
+{
+    color: #161649;
+    font-size: 50px;
+    font-style: italic;
+    
+}
+
+.navbar
+{
+    background-color:transparent;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+}
+
+/* footer{
+    background-color: rgba(0, 0, 0, 0.726);
+    max-width: 100%;
+
+} */

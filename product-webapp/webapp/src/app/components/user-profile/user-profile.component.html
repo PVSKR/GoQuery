@@ -1,0 +1,53 @@
+<div class="home">
+  <mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4" class="toolbar" >
+
+
+    <div class="example-button-row">
+      <a class="navbar-brand mb-0 h1" [routerLink]="['/dashboard']">
+        <img src="https://media.istockphoto.com/vectors/letter-logo-custom-serif-style-lettering-with-hand-drawn-brush-stroke-vector-id1208204438?k=20&m=1208204438&s=612x612&w=0&h=JpIbhnCjVSE_26a_dJFtPpKwWJMOqk2PWiqIswpWe5Q=" width="30" height="30"
+            class="d-inline-block align-top" alt="">
+        GoQuery
+    </a>
+    </div>
+  
+    <div class="spacer"></div>
+    
+    <a [routerLink]="['/questionlanding']" class="answer-button" style="margin-right: 16px">+Answer</a>
+    <a class="question-button" style="margin-right: 16px" [routerLink]="['/addquestion']">+Question</a>
+    
+  </mat-toolbar>
+
+
+
+
+
+  <br>
+  <mat-card class="email">
+    <h1>Email:{{emailId}}</h1>
+    
+  </mat-card>
+
+  <div class="all-q-card" *ngFor="let question of questionList">
+    <mat-card class="userquestions">
+      <mat-card-title>
+        Question
+      </mat-card-title>
+      <div class="one-question-card" >
+
+        <mat-card-content>
+          <h1 (click)="getAllAnswers(question?.uuidQuestionId)" [innerHtml]="question.strQuestionTitle"></h1>
+
+        </mat-card-content>
+      </div>
+
+    </mat-card>
+    
+    </div>
+
+
+
+</div>
+
+
+
+

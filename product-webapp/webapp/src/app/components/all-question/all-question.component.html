@@ -1,0 +1,5 @@
+<mat-card *ngFor="let question of questions" (click)="getAllAnswers(question?.uuidQuestionId)">
+    <mat-card-content>
+        {{question?.strQuestionTitle}}
+    </mat-card-content>
+</mat-card>
