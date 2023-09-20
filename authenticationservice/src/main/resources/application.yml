@@ -1,0 +1,38 @@
+server:
+    port: 9090
+
+jwt:
+    secret: secret
+spring:
+    application:
+        name: USER-AUTHENTICATION-SERVICE
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/gqapp?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+        username: root
+        password: admin
+
+    jpa:
+        hibernate.ddl-auto: update
+        generate-ddl: true
+        show-sql: true
+    rabbitmq:
+        host: localhost
+        password: guest
+        port: 5672
+        username: guest
+        exchange: user.exchange
+        queue: user.queue
+        routingkey: user.routingkey
+
+app:
+    jwttoken:
+        message: Login Successful
+    controller:
+        exception:
+            message1: Id and Password Empty
+            message2: Id and Password not found
+            message3: Id and Password invalid
+    service:
+        message1: Id and Password Not Found
+

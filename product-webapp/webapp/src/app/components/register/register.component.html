@@ -1,0 +1,78 @@
+<div fxLayout="column" class="nav-outer" fxLayoutAlign="space-around stretch">
+  <div>
+      <mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4 toolbar">
+          <!-- <div class="example-button-row">
+              <button mat-raised-button class="button-color" [routerLink]="['/dashboard']">GoQuery</button>
+          </div> -->
+          <a class="navbar-brand mb-0 h1" [routerLink]="['/']">
+              <img src="https://media.istockphoto.com/vectors/letter-logo-custom-serif-style-lettering-with-hand-drawn-brush-stroke-vector-id1208204438?k=20&m=1208204438&s=612x612&w=0&h=JpIbhnCjVSE_26a_dJFtPpKwWJMOqk2PWiqIswpWe5Q=" width="30" height="30" width="30" height="30"
+                  class="d-inline-block align-top" alt="">
+              GoQuery
+          </a>
+      
+          <div class="spacer"></div>
+          <a [routerLink]="['/login']" class="button-color" style="margin-right: 16px">Login</a>
+      </mat-toolbar>
+  </div>
+
+<div class="home">
+  <div class="card">
+    <div class="text-center">
+      <h1><strong>Sign Up</strong></h1>
+    </div>
+    <form [formGroup]="signupform" (ngSubmit)="signUp()">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Full Name</label>
+        <input placeholder="full name" formControlName="strUserName" type="text" class="form-control">
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserName'].dirty && signupform.hasError('required','strUserName')">*Full
+          Name is required</span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Email Address</label>
+        <input placeholder="email" formControlName="strUserEmail" type="email" class="form-control">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserEmail'].dirty && signupform.hasError('required','strUserEmail')">*
+          Email is required</span>
+      </div>
+
+      <label for="multiselect">Please Select Your Interests</label>
+      <div class="multi-select">
+        <ng-multiselect-dropdown formControlName="interests" [placeholder]="'Select Interests'"
+          [settings]="dropdownSettings" [data]="dropdownList">
+        </ng-multiselect-dropdown>
+      </div>
+      <!-- <div class="form-group mt-2">
+        <label for="exampleInputPassword1" class="form-label">Select Membership Plan</label>
+        <select class="form-select" formControlName="strUserType" aria-label="Default select example">
+          <option selected value="" class="text-muted">Please Select User Type</option>
+          <option value="Basic">Basic</option>
+          <option value="Pro">Pro</option>
+          <option value="Premium">Premium</option>
+        </select>
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserType'].dirty && signupform.hasError('required','strUserType')">*
+          User Type is required</span>
+      </div> -->
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+        <input placeholder="set password" name="pass" required formControlName="password" type="password"
+          class="form-control">
+        <span class="text-danger"
+          *ngIf="signupform.controls['password'].dirty && signupform.hasError('required','password')">*
+          password is required</span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input name="confpass" placeholder="confirm password" formControlName="confirmPassword" type="password"
+          class="form-control" required>
+        <span class="text-danger"
+          *ngIf="signupform.controls['confirmPassword'].dirty && signupform.hasError('required','confirmPassword')">* 
+          Password and confirm password doesn't matched</span>
+      </div>
+      <button style="margin-left: 40%;" type="submit" [disabled]="!signupform.valid || !matchingFunc()"
+        class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>

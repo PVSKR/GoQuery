@@ -1,0 +1,66 @@
+.home
+{
+    background-color: rgb(240, 243, 198);
+    background-image: url(/src/assets/tree.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+#toolbar-color{
+  background: rgb(34, 125, 190);
+  background: linear-gradient(90deg, rgb(49, 128, 184) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+.button-color{
+  background-color: #f7b8d7;
+  color: #8612e6fa (248, 255, 0.945);
+}
+.button-color:hover {
+  background-color: rgb(104, 236, 155);
+}
+span{
+  padding-right: 1rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.all-q-card {
+    
+  padding: 6px;
+  border-style: groove;
+  border: darkblue;
+  margin-top: 8px;
+  margin-right: 16px;
+  text-align: center;
+  font-size: 17px;
+}
+.email{
+  border-radius: 30px;
+  color: darkgreen;
+  background-color: transparent;
+  border: black;
+  border-style: solid;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  text-shadow: black;
+  text-align: center;
+  justify-content: center;
+
+
+}
+a{
+  text-decoration: none;
+  color: wheat;
+}
+img
+{
+    border-radius: 40%;
+    align-items: center;
+}

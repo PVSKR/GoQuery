@@ -1,0 +1,44 @@
+
+.container{
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  justify-content: space-between;
+  width: 100%;
+}
+#toolbar-color{
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+.button-color{
+  background-color: #f7b8d7;
+  color: #f0f8fffa (248, 255, 0.945);
+}
+.button-color:hover {
+  background-color: rgb(252, 82, 195);
+}
+span{
+  padding-right: 1rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+:host {
+    display: flex;
+    align-items: flex-start;
+  } 
+  
+.answerCard{
+  width: 80%;
+    height: 80%;
+    /* display: block; */
+    margin-left:auto;
+    margin-right:auto;  
+    margin-top: 10%;
+    margin-bottom: auto;
+    vertical-align:middle;
+}
+
