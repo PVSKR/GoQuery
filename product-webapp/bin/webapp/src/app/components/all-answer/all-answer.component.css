@@ -1,0 +1,48 @@
+.navbar {
+    justify-content: space-between;
+  }
+  #toolbar-color{
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+  }
+  .button-color{
+    background-color: #f7b8d7;
+    color: #f0f8fffa (248, 255, 0.945);
+  }
+  .button-color:hover {
+    background-color: rgb(252, 82, 195);
+  }
+  span{
+    padding-right: 1rem;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .all-answer-card{
+    background: rgb(165, 178, 187);
+    background: linear-gradient(90deg, rgb(150, 161, 168) 0%, rgb(178, 167, 201) 100%);
+      width: 100%;
+  }
+
+.answer-card{
+  background-color:rgb(166, 182, 176);
+  background: linear-gradient(90deg, rgb(155, 177, 171) 0%, rgb(121, 189, 171) 100%);
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 85%;
+  border: none;
+}
+h1{
+  font-size: 35px;
+}
+#answer-style{
+  margin-left: 2%;
+}
+ /* .vote{
+
+}  */
+.cmts-btn{
+  float: right;
+  margin-right: 2%;
+}

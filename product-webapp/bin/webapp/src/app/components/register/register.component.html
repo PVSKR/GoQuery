@@ -1,0 +1,67 @@
+<div class="home">
+  <div class="card">
+    <div class="text-center">
+      <h1><strong>Sign Up</strong></h1>
+      <h3 style="color: #fff;">Register Yourself !!</h3>
+    </div>
+    <form [formGroup]="signupform" (ngSubmit)="signUp()">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Full Name</label>
+        <input placeholder="full name" formControlName="strUserName" type="text" class="form-control">
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserName'].dirty && signupform.hasError('required','strUserName')">*Full
+          Name is required</span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Email Address</label>
+        <input placeholder="email" formControlName="strUserEmail" type="email" class="form-control">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserEmail'].dirty && signupform.hasError('required','strUserEmail')">*
+          Email is required</span>
+      </div>
+
+      <label for="multiselect">Please Select Your Interests</label>
+      <div class="multi-select">
+        <ng-multiselect-dropdown formControlName="interests" [placeholder]="'Select Interests'"
+          [settings]="dropdownSettings" [data]="dropdownList">
+        </ng-multiselect-dropdown>
+      </div>
+      <!-- <div class="form-group mt-2">
+        <label for="exampleInputPassword1" class="form-label">Select Membership Plan</label>
+        <select class="form-select" formControlName="strUserType" aria-label="Default select example">
+          <option selected value="" class="text-muted">Please Select User Type</option>
+          <option value="Basic">Basic</option>
+          <option value="Pro">Pro</option>
+          <option value="Premium">Premium</option>
+        </select>
+        <span class="text-danger"
+          *ngIf="signupform.controls['strUserType'].dirty && signupform.hasError('required','strUserType')">*
+          User Type is required</span>
+      </div> -->
+      <br>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+        <input placeholder="set password" name="pass" required formControlName="password" type="password"
+          class="form-control">
+        <span class="text-danger"
+          *ngIf="signupform.controls['password'].dirty && signupform.hasError('required','password')">*
+          password is required</span>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input name="confpass" placeholder="confirm password" formControlName="confirmPassword" type="password"
+          class="form-control" required>
+        <span class="text-danger"
+          *ngIf="signupform.controls['confirmPassword'].dirty && signupform.hasError('required','confirmPassword')">*
+          Password doesn't matched</span>
+      </div>
+      <button style="margin-left: 40%;" type="submit" [disabled]="!signupform.valid && !matching"
+        class="btn btn-primary">Sign Up</button>
+    </form>
+
+    <a style="color:aqua; margin-top:10px; margin-left: 20%;" routerLink='/login'>Already have an account? Click to
+      login
+      !!</a>
+  </div>
+</div>

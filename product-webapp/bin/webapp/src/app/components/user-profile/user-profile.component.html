@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" id="toolbar-color" class="mat-elevation-z4" class="toolbar" >
+
+
+    <div class="example-button-row">
+      <button mat-raised-button class="button-color" [routerLink]="['/dashboard']">GoQuery</button>
+    </div>
+  
+    <div class="spacer"></div>
+    <button mat-raised-button [routerLink]="['/questionlanding']" class="button-color" style="margin-right: 16px">Answer a
+      Question</button>
+    <button mat-raised-button class="button-color" style="margin-right: 16px" [routerLink]="['/addquestion']">Add a Question</button>
+  </mat-toolbar>
+
+
+  <br>
+
+<div class="question-card" *ngFor="let question of questionList">
+
+  <h1 (click)="getAllAnswers(question?.uuidQuestionId)" [innerHtml]="question.strQuestionTitle"></h1>
+
+</div>
+
+
+<div class="answer-card" *ngFor="let answer of answersList">
+
+<h1 [innerHtml]="answer.strAnswerStatement"></h1>
+</div>
+
+
+
+
